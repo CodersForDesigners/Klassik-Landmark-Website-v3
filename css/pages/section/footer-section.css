@@ -1,0 +1,46 @@
+/*
+ * Footer Section
+ */
+
+.footer-section {}
+
+.footer-section a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+.footer-section .link {
+	margin-bottom: 10px; 
+}
+
+.footer-section .address {
+	margin-bottom: 10px
+}
+
+.footer-section .seyonii-badge {
+	width: 220px;
+}
+
+@media( min-width: 640px )  {
+	.footer-section .link {
+		margin-bottom: 15px; 
+	}
+
+	.footer-section .address {
+		margin-bottom: 15px
+	}
+}
+@media( min-width: 1040px ) {
+	.footer-section .contact {
+		text-align: right;
+	}
+}
+@media( min-width: 1480px ) {
+	.footer-section .link {
+		margin-bottom: 20px; 
+	}
+
+	.footer-section .address {
+		margin-bottom: 20px
+	}
+}

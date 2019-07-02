@@ -1,0 +1,68 @@
+/*
+ * Building Section Air Quality
+ */
+
+.building-section-air-quality {}
+
+.building-section-air-quality .points-roman {
+	position: relative;
+}
+
+.building-section-air-quality .points-roman .point {
+	position: relative;
+	margin-bottom: 15px;
+}
+
+.building-section-air-quality .points-roman .point:before {
+	content: '';
+	display: inline-block;
+	top: 2px;
+	left: -5px;
+	position: absolute;
+	transform: translateX(-100%);
+	color: var(--red-0);
+
+	font-size: 0.9rem;
+	font-family: acumin-pro, Arial, sans-serif;
+	line-height: 1.25;
+}
+
+.building-section-air-quality .points-roman .point:nth-child(1):before { content: 'I.'; }
+.building-section-air-quality .points-roman .point:nth-child(2):before { content: 'II.'; }
+.building-section-air-quality .points-roman .point:nth-child(3):before { content: 'III.'; }
+.building-section-air-quality .points-roman .point:nth-child(4):before { content: 'IV.'; }
+.building-section-air-quality .points-roman .point:nth-child(5):before { content: 'V.'; }
+.building-section-air-quality .points-roman .point:nth-child(6):before { content: 'VI.'; }
+.building-section-air-quality .points-roman .point:nth-child(7):before { content: 'VII.'; }
+.building-section-air-quality .points-roman .point:nth-child(8):before { content: 'VIII.'; }
+.building-section-air-quality .points-roman .point:nth-child(9):before { content: 'IX.'; }
+.building-section-air-quality .points-roman .point:nth-child(10):before { content: 'X.'; }
+
+
+.building-section-air-quality .air-quality-certificate .title {
+	padding-bottom: 10px;
+}
+
+@media( min-width: 640px )  {
+	.building-section-air-quality .points-roman .point {
+		margin-bottom: 20px;
+	}
+	.building-section-air-quality .points-roman .point:before {
+		top: 3px;
+		left: -10px;
+		font-size: 1.0rem;
+	}
+}
+@media( min-width: 1040px ) {
+	.building-section-air-quality .points-roman .point:before { font-size: 1.1rem; }
+}
+@media( min-width: 1480px ) {
+	.building-section-air-quality .points-roman .point {
+		margin-bottom: 30px;
+	}
+	.building-section-air-quality .points-roman .point:before {
+		top: 5px;
+		left: -15px;
+		font-size: 1.3rem;
+	}
+}

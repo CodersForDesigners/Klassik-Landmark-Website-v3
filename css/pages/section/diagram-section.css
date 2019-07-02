@@ -1,0 +1,44 @@
+/*
+ * Diagram Section
+ */
+
+.diagram-section {}
+
+.diagram-section .diagram {
+	min-height: 300px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+/*.diagram-section .content {
+	min-height: 300px
+}*/
+
+@media( min-width: 640px )  {
+	.diagram-section .diagram {
+		min-height: 600px;
+	}
+	/*.diagram-section .content {
+		min-height: 600px
+	}*/
+}
+@media( min-width: 1040px ) {
+	.diagram-section .flex-rtl {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	.diagram-section .diagram {
+		min-height: 620px;
+	}
+	.diagram-section .content {
+		min-height: 620px
+	}
+}
+@media( min-width: 1480px ) {
+	.diagram-section .diagram {
+		min-height: 800px;
+	}
+	.diagram-section .content {
+		min-height: 800px
+	}
+}

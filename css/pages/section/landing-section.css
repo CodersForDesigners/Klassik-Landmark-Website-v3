@@ -1,0 +1,56 @@
+/*
+ * Landing Section
+ */
+
+.landing-section {
+	background-color: #006bd0;
+	height: 1000px;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: 640px; 
+}
+
+.landing-section .card { padding: 20px; }
+
+.landing-section .card-1 { margin-bottom: 120px; }
+.landing-section .card-2 { margin-bottom: 320px; }
+
+@media( min-width: 640px )  {
+	.landing-section {
+		height: 1500px;
+		background-size: 1380px; 
+	}
+	.landing-section .card { padding: 30px; }
+
+	.landing-section .card-1 { margin-bottom: 660px; }
+	.landing-section .card-2 { margin-bottom: 100px; }
+}
+@media( min-width: 1040px ) {
+	.landing-section { height: 1340px; }
+	
+	.landing-section .card-0 { margin-top: 100px; }
+	.landing-section .card-1 { margin-bottom: 350px; }
+	.landing-section .card-2 { margin-bottom: 100px; }
+}
+@media( min-width: 1480px ) {
+	.landing-section {
+		background-size: 1940px; 
+		height: 1860px;
+	}
+	.landing-section .card { padding: 50px; }
+
+	.landing-section .card-0 { margin-top: 120px; }
+	.landing-section .card-1 { margin-bottom: 520px; }
+	.landing-section .card-2 { margin-bottom: 120px; }
+
+}
+
+@media( min-width: 1940px ) {
+	.landing-section {
+		background-size: cover;
+		height: 2560px;
+	}
+
+	.landing-section .card-1 { margin-bottom: 1220px; }
+	.landing-section .card-2 { margin-bottom: 180px; }
+}

@@ -1,0 +1,160 @@
+/*
+ * Location Section
+ */
+
+.location-section {
+	position: relative;
+}
+
+.location-section .layer-1 {
+	position: relative;
+	z-index: 1;
+}
+
+.location-section .layer-2 {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+}
+
+.location-section .points .point {
+	position: relative;
+	margin-bottom: 15px;
+}
+
+.location-section .points .point .icon:before {
+	content: '';
+	display: block;
+	width: 20px;
+	height: 20px;
+	/*background-color: var(--dark-0);*/
+	position: absolute;
+	top: -1px;
+	left: -5px;
+	transform: translateX(-100%);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.location-section .points .point .icon.time:before {
+	background-image: url('/media/icons/time-red.svg');
+}
+.location-section .points .point .icon.distance:before {
+	background-image: url('/media/icons/distance-red.svg');
+}
+
+.location-section .layer-2 .card { padding: 20px; }
+
+.location-section .location-map {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+@media( min-width: 640px )  {
+	.location-section .layer-2 .card { padding: 30px; }
+	.location-section .points .point {
+		margin-bottom: 20px;
+	}
+	.location-section .points .point .icon:before {
+		top: -3px;
+		left: -10px;
+		width: 32px;
+		height: 32px;
+	}
+}
+
+@media( min-width: 1040px ) {
+	.location-section .layer-1 .points { margin-top: 180px; }
+	.location-section .points .point .icon:before {
+		top: -1px;
+	}
+	.location-section .location-map { height: 900px; }
+}
+
+@media( min-width: 1480px ) {
+	.location-section .layer-1 .points { margin-top: 256px; }
+	.location-section .layer-2 .card { padding: 50px; }
+	.location-section .points .point {
+		margin-bottom: 30px;
+	}
+	.location-section .points .point .icon:before {
+		top: -2px;
+		left: -15px;
+		width: 40px;
+		height: 40px;
+	}
+	.location-section .location-map { height: 1200px; }
+}
+
+
+/*
+ * Location Section Collage
+ */
+
+.location-section-collage {
+	position: relative;
+}
+
+.location-section-collage .layer-1 {
+	position: relative;
+	z-index: 1;
+}
+
+.location-section-collage .layer-1 .photo {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.location-section-collage .layer-1 .half { height: 300px; }
+.location-section-collage .layer-1 .quarter { height: 150px; }
+
+.location-section-collage .layer-2 {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+}
+
+.location-section-collage .layer-2 .card {
+	margin-top: 150px;
+	height: 150px;
+	padding: 25px;
+}
+
+@media( min-width: 640px )  {
+	.location-section-collage .layer-1 .half { height: 640px; }
+	.location-section-collage .layer-1 .quarter { height: 300px; }
+	.location-section-collage .layer-2 .card {
+		margin-top: 300px;
+		height: 300px;
+		padding: 60px;
+	}
+}
+
+@media( min-width: 1040px ) {
+	.location-section-collage .layer-1 .half { height: 500px; }
+	.location-section-collage .layer-1 .quarter { height: 250px; }
+	.location-section-collage .layer-2 .card {
+		margin-top: 0;
+		height: 250px;
+		padding: 40px;
+	}
+}
+
+@media( min-width: 1480px ) {
+	.location-section-collage .layer-2 .card { padding: 50px; }
+	.location-section-collage .layer-1 .half { height: 670px; }
+	.location-section-collage .layer-1 .quarter { height: 335px; }
+	.location-section-collage .layer-2 .card {
+		height: 335px;
+		padding: 60px;
+	}
+}

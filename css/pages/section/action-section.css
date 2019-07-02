@@ -1,0 +1,15 @@
+/*
+ * Action Section
+ */
+
+.action-section {}
+
+.action-section .action-bg {
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-size: contain;
+}
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {}
+@media( min-width: 1480px ) {}

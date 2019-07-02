@@ -1,0 +1,65 @@
+/*
+ * Collage Section
+ */
+
+.collage-section {
+	position: relative;
+	overflow: hidden;
+}
+
+.collage-section .layer-1 {
+	position: relative;
+	z-index: 1;
+	font-size: 0;
+}
+
+.collage-section .layer-1 .photo {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.collage-section .layer-1 .half { height: 300px; }
+.collage-section .layer-1 .quarter { height: 150px; }
+
+.collage-section .layer-2 {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 2;
+	width: 100%;
+	height: auto;
+}
+
+.collage-section .layer-2 .card { 
+	padding: 25px;
+	height: 150px; 
+}
+
+@media( min-width: 640px )  {
+	.collage-section .layer-1 .half { height: 620px; }
+	.collage-section .layer-1 .quarter { height: 310px; }
+	.collage-section .layer-2 .card {
+		padding: 40px;
+		height: 310px;
+	}
+}
+@media( min-width: 1040px ) {
+	.collage-section .layer-1 .half { height: 620px; }
+	.collage-section .layer-1 .quarter { height: 310px; }
+	.collage-section .layer-2 .card { height: 310px; }
+}
+@media( min-width: 1480px ) {
+	.collage-section .layer-1 .half { height: 800px; }
+	.collage-section .layer-1 .quarter { height: 400px; }
+	.collage-section .layer-2 .card {
+		padding: 60px;
+		height: 400px;
+	}
+}
+
+@media( min-width: 1940px ) {
+	.collage-section .layer-1 .half { height: 1200px; }
+	.collage-section .layer-1 .quarter { height: 600px; }
+
+}

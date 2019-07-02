@@ -1,0 +1,51 @@
+/*
+ * Photo Bleed Section
+ */
+
+.photo-bleed-section { position: relative; }
+
+.photo-bleed-section .layer-1 { 
+	position: relative;
+	z-index: 1;
+}
+
+.photo-bleed-section .layer-2 { 
+	position: relative;
+	z-index: 2;
+}
+
+.photo-bleed-section .layer-2 .photo {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.photo-bleed-section .layer-3 {
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events: none;
+}
+
+.photo-bleed-section .layer-3 .card { padding: 25px; }
+
+@media( min-width: 640px )  {
+	.photo-bleed-section .layer-3 .card { padding: 40px; }
+}
+@media( min-width: 1040px ) {
+	.photo-bleed-section .layer-2 {
+		position: absolute;
+		z-index: 2;
+		pointer-events: none;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+@media( min-width: 1480px ) {
+	.photo-bleed-section .layer-3 .card { padding: 60px; }
+}

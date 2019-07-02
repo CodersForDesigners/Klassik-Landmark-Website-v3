@@ -1,0 +1,39 @@
+
+# Disable redirects with trailing slashes when URLs match the directory paths
+# DirectorySlash Off
+
+
+
+
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+# The Home page
+RewriteRule ^/?$ pages/island.php [QSA,L,NC]
+
+# Page routing
+RewriteRule ^/?(island)/?$ pages/$1.php?_slug=$1 [QSA,NC,L]
+RewriteRule ^/?(plush)/?$ pages/$1.php?_slug=$1 [QSA,NC,L]
+RewriteRule ^/?(elevate)/?$ pages/$1.php?_slug=$1 [QSA,NC,L]
+RewriteRule ^/?(brochure)/?$ pages/$1.php?_slug=$1 [QSA,NC,L]
+RewriteRule ^/?(review)/?$ pages/$1.php?_slug=$1 [QSA,NC,L]
+# # An empty page
+RewriteRule ((^/?)|/)blank/(.*)$ pages/virtually-empty.php [QSA,L]
+# # A page for Tracking and Analytics
+RewriteRule ((^/?)|/)trac([^/]*)/(.*)$ pages/virtually-empty.php [QSA,L]
+# # The Pricing page
+RewriteRule ^/?pricing(/.*)?$ https://%{HTTP_HOST}/landmark-pricing/pricing$1 [P]
+# # The Quotes page
+RewriteRule ^/?quote$ https://%{HTTP_HOST}/landmark-pricing/quote [P]
+
+# Redirect URLs with trailing slashes to versions without
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+RewriteRule (.+)/$ /$1 [R=301,QSA,L,NC]
+
+# Default fallback
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+RewriteRule .? /pages/island.php [R=301,QSA,L,NC]
+
+</IfModule>

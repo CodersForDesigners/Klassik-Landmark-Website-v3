@@ -1,0 +1,397 @@
+/*
+ * Navigation Section
+ */
+
+.navigation-section {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000000001; /* M: in order to defeat the live-chat z-index war */
+	transform: translateY(45px);
+	transition: transform .3s .6s ease-out;
+}
+
+.navigation-section:hover {
+	transform: translateY(0) !important;
+	transition: transform .3s ease-out;
+}
+.navigation-section.show {
+	transform: translateY(0);
+	transition: transform .3s ease-out;
+}
+
+.navigation-section .link {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	text-decoration: none;
+	height: 100px;
+	padding: 15px;
+	transition: box-shadow .25s .15s ease-out, filter .25s ease-out;
+}
+
+.navigation-section .link:hover {
+	filter: brightness(0.9);
+	box-shadow: inset 0px 2px 12px 2px rgba(0,0,0,0.25), inset 0px 2px 3px 1px rgba(0,0,0,0.25);
+}
+
+/*.navigation-section .link * { pointer-events: none; }*/
+
+.navigation-section .link .title {
+	margin-bottom: 3px;
+	font-size: 1.4rem;
+	line-height: 1.2;
+}
+
+.navigation-section .link .sub-title {
+	margin-bottom: 10px;
+	font-size: 1.2rem;
+	line-height: 1.2;
+}
+
+.navigation-section .link .description {
+	font-size: 1.2rem;
+	line-height: 1.2;
+}
+
+.navigation-section .link hr.dash {
+	width: 20px;
+	margin: 0;
+	margin-bottom: 8px;
+	border-color: var(--light-0);
+}
+
+
+/*.navigation-section .pricing {
+	background-color: var(--red-1);
+}
+.navigation-section .pricing.active {
+	background-color: var(--red-2)
+}*/
+
+.navigation-section .pricing .title {
+	margin-bottom: 20px;
+}
+
+.navigation-section .pricing .icon {
+	display: none;
+	width: 24px;
+	height: 24px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/*.navigation-section .variant {
+	background-color: var(--dark-1);
+}*/
+/*.navigation-section .variant.active {
+	background-color: var(--dark-2)
+}
+
+.navigation-section .variant.active .title {
+	color: var(--red-1);
+}
+
+.navigation-section .variant.active .description {
+	color: var(--red-1);
+}
+
+.navigation-section .variant.active hr.dash {
+	border-color: var(--red-1);
+}*/
+
+.navigation-section .container .link:first-child:after {
+	content: '';
+	position: absolute;
+	z-index: 2;
+	display: block;
+	top: 0;
+	left: 0px;
+	bottom: 0;
+	width: var(--container-margin);
+	transform: translateX(-100%);
+	background-color: var(--red-2-75)
+}
+
+/* -- Vertical Lines -- */
+
+/*.navigation-section .container .link:nth-child(2):before,
+.navigation-section .container .link:nth-child(3):before {
+	content: '';
+	position: absolute;
+	z-index: 2;
+	display: block;
+	top: 15px;
+	bottom: 15px;
+	right: 0;
+	width: 1px;
+	background-color: var(--light-0);
+}*/
+
+/* -- Translucent Bands on Left and Right -- */
+.navigation-section .container .link:first-child:after,
+.navigation-section .container .link:last-child:after {
+	content: '';
+	position: absolute;
+	z-index: 2;
+	display: block;
+	top: 0;
+	bottom: 0;
+	width: var(--container-margin);
+}
+
+.navigation-section .container .link:first-child:after {
+	left: 0px;
+	transform: translateX(-100%);
+	background-color: var(--red-2-75)
+}
+.navigation-section .container .link:last-child:after {
+	right: 0px;
+	transform: translateX(100%);
+	background-color: var(--dark-2-75)
+}
+
+
+/* -- New Tower Flag -- */
+.navigation-section .container .link .flag {
+	width: 40px;
+	box-sizing: content-box;
+	padding-top: 8px;
+	padding-bottom: 6px;
+	position: absolute;
+	top: 0;
+	right: 15px;
+	background-color: var(--red-1);
+	color: var(--light-0);
+	font-size: 0;
+	text-align: center;
+	box-shadow: 0 -2px 10px 2px rgba(0,0,0,0.1), 0 0 3px 1px rgba(0,0,0,0.2);
+}
+.navigation-section .container .link .flag:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 0;
+	height: 0;
+	border-bottom: 10px solid transparent;
+	border-left: 20px solid var(--red-1);
+	border-right: 20px solid var(--red-1);
+}
+
+.navigation-section .container .link .flag .icon {
+	display: inline-block;
+	height: 22px;
+	width: 22px;
+	margin-bottom: 4px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	opacity: 0.75;
+}
+
+.navigation-section .container .link .flag .label {
+	font-size: 0.9rem;
+	line-height: 1;
+	letter-spacing: -0.05rem;
+	opacity: 1;
+}
+
+/*.navigation-section .container .link.active .flag {
+	background-color: var(--red-2);
+}
+
+.navigation-section .container .link.active .flag:after {
+	border-left: 20px solid var(--red-2);
+	border-right: 20px solid var(--red-2);
+}
+
+.navigation-section .container .link.active .flag .icon {
+	opacity: 0.5;
+}
+
+.navigation-section .container .link.active .flag .label {
+	opacity: 0.75;
+}*/
+
+@media( max-width: 1039px )  { /* -- To solve for Overflow Scroll only on Tablet -- */
+	.navigation-section .row {
+		position: relative;
+	}
+
+	.navigation-section .row .scrollee {
+		position: relative;
+		width: auto;
+	}
+
+	.navigation-section .row .scrollee .container {
+		position: relative;
+		max-width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		white-space: nowrap;
+		margin: 0;
+	}
+
+	.navigation-section .row .scrollee .container .link {
+		position: relative;
+		z-index: 1;
+		width: 200px !important;
+		white-space: normal;
+	}
+
+	.navigation-section .row .scrollee .container .link:first-child {
+		margin-left: var(--container-margin);
+	}
+
+	.navigation-section .row .scrollee .container .link:last-child {
+		margin-right: var(--container-margin);
+	}
+}
+
+@media( max-width: 639px )  { /* -- To solve for Overflow Scroll only on mobile -- */
+	.navigation-section .row .scrollee .container .link:first-child {
+		margin-left: var(--container-margin);
+	}
+
+	.navigation-section .row .scrollee .container .link:last-child {
+		margin-right: var(--container-margin);
+	}
+}
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {
+	.navigation-section.show,
+	.navigation-section {
+		transform: translateY(50px);
+	}
+
+	.navigation-section .link {
+		height: 120px;
+		padding: 20px 40px;
+	}
+
+	.navigation-section .link .title {
+		position: relative;
+		margin-bottom: 5px;
+		font-size: 1.6rem;
+	}
+
+	.navigation-section .container .link .title:before {
+		content: '';
+		display: inline-block;
+		top: 2px;
+		left: -5px;
+		position: absolute;
+		transform: translateX(-100%);
+		color: var(--neutral-1);
+
+		font-size: 1.1rem;
+		font-family: acumin-pro, Arial, sans-serif;
+		line-height: 1.25;
+	}
+
+	.navigation-section .container .link:nth-child(1) .title:before { content: 'I.'; }
+	.navigation-section .container .link:nth-child(2) .title:before { content: 'II.'; }
+	.navigation-section .container .link:nth-child(3) .title:before { content: 'III.'; }
+	.navigation-section .container .link:nth-child(4) .title:before { content: 'IV.'; }
+	.navigation-section .container .link:nth-child(5) .title:before { content: 'V.'; }
+
+	.navigation-section .link .sub-title {
+		margin-bottom: 12px;
+		font-size: 1.4rem;
+	}
+
+	.navigation-section .link .description {
+		font-size: 1.4rem;
+	}
+
+	.navigation-section .link hr.dash {
+		margin-bottom: 10px;
+	}
+
+	/* -- Vertical Lines -- */
+	/*.navigation-section .container .link:nth-child(2):before,
+	.navigation-section .container .link:nth-child(3):before {
+		top: 20px;
+		bottom: 20px;
+	}*/
+
+	.navigation-section .pricing .sub-title {
+		margin-bottom: 15px;
+	}
+
+	.navigation-section .pricing .icon {
+		display: block;
+	}
+
+	/* -- New Tower Flag */
+	.navigation-section .container .link .flag {
+		top: -10px;
+		right: 20px;
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+	}
+
+	/* -- Translucent Bands on Left and Right -- */
+	.navigation-section .container .link:first-child:after,
+	.navigation-section .container .link:last-child:after {
+		width: 1000px;
+	}
+
+}
+@media( min-width: 1480px ) {
+	.navigation-section.show,
+	.navigation-section {
+		transform: translateY(60px);
+	}
+
+	.navigation-section .link {
+		height: 150px;
+		padding: 30px 50px;
+	}
+
+	.navigation-section .link .title {
+		margin-bottom: 8px;
+		font-size: 1.8rem;
+	}
+
+	.navigation-section .container .link .title:before {
+		top: 5px;
+		left: -15px;
+		font-size: 1.3rem;
+	}
+
+	.navigation-section .link .sub-title {
+		margin-bottom: 14px;
+		font-size: 1.6rem;
+	}
+
+	.navigation-section .link .description {
+		font-size: 1.6rem;
+	}
+
+	.navigation-section .link hr.dash {
+		margin-bottom: 12px;
+	}
+
+	/* -- Vertical Lines -- */
+	/*.navigation-section .container .link:nth-child(2):before,
+	.navigation-section .container .link:nth-child(3):before {
+		top: 30px;
+		bottom: 30px;
+	}*/
+
+	.navigation-section .pricing .sub-title {
+		margin-bottom: 20px;
+	}
+
+	.navigation-section .pricing .icon {
+		width: 32px;
+		height: 32px;
+	}
+
+
+}

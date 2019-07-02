@@ -1,0 +1,137 @@
+/*
+ * Building Section Air Quality
+ */
+
+.apartment-section-floorplan {
+	overflow: hidden;
+}
+
+.apartment-section-floorplan .points-roman {
+	position: relative;
+}
+
+.apartment-section-floorplan .points-roman .point {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.apartment-section-floorplan .points-roman .point:before {
+	content: '';
+	display: inline-block;
+	top: 2px;
+	left: -5px;
+	position: absolute;
+	transform: translateX(-100%);
+	color: var(--red-1);
+
+	font-size: 0.9rem;
+	font-family: acumin-pro, Arial, sans-serif;
+	line-height: 1.25;
+}
+.apartment-section-floorplan .fill-red-1 .points-roman .point:before { color: var(--dark-1); }
+.apartment-section-floorplan .fill-neutral-0 .points-roman .point:before { color: var(--red-2); }
+.apartment-section-floorplan .fill-dark-1 .points-roman .point:before { color: var(--red-0);  }
+
+.apartment-section-floorplan .points-roman .point:nth-child(1):before { content: 'I.'; }
+.apartment-section-floorplan .points-roman .point:nth-child(2):before { content: 'II.'; }
+.apartment-section-floorplan .points-roman .point:nth-child(3):before { content: 'III.'; }
+.apartment-section-floorplan .points-roman .point:nth-child(4):before { content: 'IV.'; }
+.apartment-section-floorplan .points-roman .point:nth-child(5):before { content: 'V.'; }
+.apartment-section-floorplan .points-roman .point:nth-child(6):before { content: 'VI.'; }
+.apartment-section-floorplan .points-roman .point:nth-child(7):before { content: 'VII.'; }
+.apartment-section-floorplan .points-roman .point:nth-child(8):before { content: 'VIII.'; }
+.apartment-section-floorplan .points-roman .point:nth-child(9):before { content: 'IX.'; }
+.apartment-section-floorplan .points-roman .point:nth-child(10):before { content: 'X.'; }
+
+
+.apartment-section-floorplan .layer-1 { 
+	position: relative;
+	z-index: 2;
+}
+.apartment-section-floorplan .layer-2 {
+	position: relative;
+	z-index: 1;
+}
+
+.apartment-section-floorplan .floorplan {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 100%; /* -- Makes it Square -- */
+	z-index: 1;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: bottom left;
+}
+
+.apartment-section-floorplan .floorplan.island-f {
+	transform: scale(1.5) rotate(-25deg) translateY(4%) translateX(-5%);
+}
+.apartment-section-floorplan .floorplan.plush-b {
+	transform: scale(1.5) rotate(-25deg) translateY(15%) translateX(-5%);
+}
+.apartment-section-floorplan .floorplan.plush-e {
+	transform: scale(1.5) rotate(-25deg) translateY(10%) translateX(-5%);
+}
+.apartment-section-floorplan .floorplan.elevate-b {
+	transform: scale(1.6) rotate(-25deg) translateY(14%) translateX(-6%);
+}
+
+.apartment-section-floorplan .floorplan + *,
+.apartment-section-floorplan .floorplan + * + * {
+	position: relative;
+	z-index: 2;
+}
+
+@media( min-width: 640px )  {
+	.apartment-section-floorplan .points-roman .point {
+		margin-bottom: 30px;
+	}
+	.apartment-section-floorplan .points-roman .point:before {
+		top: 3px;
+		left: -10px;
+		font-size: 1.0rem;
+	}
+}
+@media( min-width: 1040px ) {
+	.apartment-section-floorplan .points-roman .point:before { font-size: 1.1rem; }
+
+	.apartment-section-floorplan .layer-1 { 
+		z-index: 1;
+	}
+	.apartment-section-floorplan .layer-2 {
+		z-index: 2;
+	}
+	
+	.apartment-section-floorplan .floorplan.island-f {
+		transform: scale(1.8) rotate(-25deg) translateY(4%) translateX(0%);
+	}
+	.apartment-section-floorplan .floorplan.plush-b {
+		transform: scale(1.8) rotate(-25deg) translateY(20%) translateX(-2%);
+	}
+	.apartment-section-floorplan .floorplan.plush-e {
+		transform: scale(1.8) rotate(-25deg) translateY(10%) translateX(-5%);
+	}
+	.apartment-section-floorplan .floorplan.elevate-b {
+		transform: scale(1.8) rotate(-25deg) translateY(16%) translateX(-4%);
+	}
+
+	.apartment-section-floorplan.flip .row .container {
+		direction: rtl;
+	}
+
+	.apartment-section-floorplan.flip .row .container * {
+		direction: ltr;
+	}
+}
+@media( min-width: 1480px ) {
+	.apartment-section-floorplan .points-roman .point {
+		margin-bottom: 40px;
+	}
+	.apartment-section-floorplan .points-roman .point:before {
+		top: 5px;
+		left: -15px;
+		font-size: 1.3rem;
+	}
+}
