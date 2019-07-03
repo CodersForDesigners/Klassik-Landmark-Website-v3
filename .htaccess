@@ -34,6 +34,6 @@ RewriteRule (.+)/$ /$1 [R=301,QSA,L,NC]
 
 # Default fallback
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
-RewriteRule .? /pages/island.php [R=301,QSA,L,NC]
+RewriteRule .? / [R=301,QSA,L,NC]
 
 </IfModule>
