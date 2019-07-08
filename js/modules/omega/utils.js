@@ -148,7 +148,9 @@ utils.setCookie = function setCookie ( name, data, duration ) {
 
 	var url = location.origin;
 	if ( __envProduction ) {
-		url += "/" + document.getElementsByTagName( "base" )[ 0 ].getAttribute( "href" ).replace( /\//g, "" );
+		var domBase = document.getElementsByTagName( "base" );
+		if ( domBase.length )
+			url += "/" + domBase[ 0 ].getAttribute( "href" ).replace( /\//g, "" );
 	}
 	url += "/inc/set-cookie-async.php";
 	var queryString = "?" + "_cookie=" + encodeURIComponent( name );
