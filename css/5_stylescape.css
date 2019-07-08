@@ -641,22 +641,22 @@ hr.underline {
 }
 
 /* -- the "Phone number" field -- */
-.form-row.phone-field {
+.form-row .phone-field {
 	display: flex;
 	flex-wrap: wrap;
 }
-.form-row.phone-field label {
+.form-row .phone-field label {
 	flex-basis: 100%;
 	margin: 0 0 0.2rem;
 }
-.form-row.phone-field .phone-country-code {
+.form-row .phone-field .phone-country-code {
 	position: relative;
 	flex-basis: 25%;
 }
-	.form-row.phone-field .phone-country-code select {
+	.form-row .phone-field .phone-country-code select {
 		width: 100%;
 	}
-	.form-row.phone-field .phone-country-code input {
+	.form-row .phone-field .phone-country-code input {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -666,7 +666,7 @@ hr.underline {
 		text-align: center;
 		pointer-events: none;
 	}
-.form-row.phone-field .phone-number {
+.form-row .phone-field .phone-number {
 	flex-basis: 75%;
 }
 
@@ -689,7 +689,14 @@ button .icon,
 		bottom: 40px;
 	}
 }
-@media( min-width: 1040px ) {}
+@media( min-width: 1040px ) {
+	.form-row.large-5.large-offset-1 { padding-right: 20px; }
+	.form-row.large-5.large-offset-0 { padding-left: 20px; }
+
+	.form-row.large-5.large-offset-1 input + .icon {
+		right: 35px;
+	}
+}
 @media( min-width: 1480px ) {
 	.form-row { padding-bottom: 20px; }
 
@@ -706,7 +713,36 @@ button .icon,
 		width: 28px;
 		right: 20px;
 	}
+
+	.form-row.large-5.large-offset-1 input + .icon {
+		right: 40px;
+	}
 }
+
+
+/*
+ *
+ *	Type Description
+ *
+ */
+
+.type-description {}
+
+.type-description .definition { padding: 15px; }
+
+@media( min-width: 1040px ) {
+	.type-description .definition { padding: 20px; }
+	
+	.type-description .large-5.large-offset-1 { padding-right: 40px; }
+	.type-description .large-5.large-offset-0 { padding-left: 40px; }
+}
+@media( min-width: 1480px ) {
+	.type-description .definition { padding: 25px; }
+
+	.type-description .large-5.large-offset-1 { padding-right: 60px; }
+	.type-description .large-5.large-offset-0 { padding-left: 60px; }
+}
+
 
 /*
  *
