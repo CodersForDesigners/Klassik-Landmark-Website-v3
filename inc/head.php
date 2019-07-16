@@ -210,7 +210,7 @@ ARB
 	<script type="text/javascript">
 
 		// Establish the environment
-		var __envProduction = <?php echo $productionEnv ? 'true' : 'false' ?>;
+		var __envProduction = <?php echo empty( $productionEnv ) ? 'false' : 'true' ?>;
 		var __envProduction = true;
 
 		// Establish global state
