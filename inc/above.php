@@ -93,15 +93,15 @@ http_response_code( 200 );
 						</div>
 					</div>
 					<div class="row">
-						<div class="card card-1 columns small-9 small-offset-3 large-6 large-offset-6 fill-light-0">
+						<a href="#aerodynamics" class="card card-1 columns small-9 small-offset-3 large-6 large-offset-6 fill-light-0">
 							<div class="h2 strong text-dark-1">The only <span class="text-red-1">all 3BHK</span> apartment development</div>
 							<div class="h3 text-red-1">in the Sarjapur Road vicinity</div>
-						</div>
+						</a>
 					</div>
 					<div class="row">
-						<div class="card card-2 columns small-12 medium-9 large-6 fill-red-1">
+						<a href="#type" class="card card-2 columns small-12 medium-9 large-6 fill-red-1">
 							<div class="h1 strong text-light-0">Rich, Comfy and Better Engineered</div>
-						</div>
+						</a>
 					</div>
 					<div class="row">
 						<div class="card card-3 columns small-12 medium-9 medium-offset-3 large-6 large-offset-6 fill-dark-1">

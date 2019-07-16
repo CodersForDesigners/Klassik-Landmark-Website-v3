@@ -24,7 +24,17 @@
 		<div class="container">
 			<div class="columns small-12 fill-light-2 block-space-top-bottom" data-loginner="Enquiry" data-context="Island Page">
 				<div class="row block-space-top-bottom" >
-					<div class="h4 text-red-1 block-space-bottom columns small-10 small-offset-1 medium-6 medium-offset-3 large-10 large-offset-1">Enquire Now</div>
+					<div class="form-row columns small-10 small-offset-1 medium-6 medium-offset-3 large-5 large-offset-1">
+						<div class="h4 text-dark-1">Call us Directly</div>
+					</div>
+					<br>
+					<div class="form-row columns small-10 small-offset-1 medium-6 medium-offset-3 large-5 large-offset-1 block-space-bottom">
+						<a class="callback button block fill-dark-1" href="tel:+919663396887">
+							<span>+91-96633-96887</span>
+							<img class="icon" src="/media/icons/talk.svg<?php echo $ver ?>">
+						</a>
+					</div>
+					<div class="h4 text-red-1 block-space-top-bottom columns small-10 small-offset-1 medium-6 medium-offset-3 large-10 large-offset-1">Enquire Now</div>
 					<form class="js_enquiry_form js_user_required">
 						<div class="form-row columns small-10 small-offset-1 medium-6 medium-offset-3 large-5 large-offset-1">
 							<label>
@@ -40,19 +50,6 @@
 								<img class="icon" src="/media/icons/email.svg<?php echo $ver ?>">
 							</label>
 						</div>
-						<div class="form-row columns small-10 small-offset-1 medium-6 medium-offset-3 large-10 large-offset-1">
-							<label>
-								<span class="invisible">Submit</span><br>
-								<button type="submit" class="button block fill-red-1" style="position: relative;">
-									<span>Send</span>
-									<img class="icon" src="/media/icons/send.svg<?php echo $ver ?>">
-								</button>
-							</label>
-						</div>
-					</form>
-					<!-- Phone Trap -->
-					<!-- Phone form -->
-					<form class="loginner_form_phone hidden">
 						<div class="form-row columns small-10 small-offset-1 medium-6 medium-offset-3 large-5 large-offset-1">
 							<div class="phone-field">
 								<label for="enquire-form-phone-field">
@@ -72,6 +69,19 @@
 								</div>
 							</div>
 						</div>
+						<div class="form-row columns small-10 small-offset-1 medium-6 medium-offset-3 large-5 large-offset-0">
+							<label>
+								<span class="invisible">Submit</span><br>
+								<button type="submit" class="button block fill-red-1" style="position: relative;">
+									<span>Send</span>
+									<img class="icon" src="/media/icons/send.svg<?php echo $ver ?>">
+								</button>
+							</label>
+						</div>
+					</form>
+					<!-- Phone Trap -->
+					<!-- Phone form -->
+					<form class="loginner_form_phone hidden">
 						<div class="form-row columns small-10 small-offset-1 medium-6 medium-offset-3 large-5 large-offset-0">
 							<label>
 								<span class="invisible">Submit</span><br>

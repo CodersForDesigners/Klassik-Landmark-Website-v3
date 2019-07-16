@@ -640,6 +640,9 @@ hr.underline {
 	transform: translateY(50%);
 }
 
+.form-row .callback span { font-size: 1.8rem; }
+
+
 /* -- the "Phone number" field -- */
 .form-row .phone-field {
 	display: flex;
@@ -688,6 +691,8 @@ button .icon,
 	.form-row input + .icon {
 		bottom: 40px;
 	}
+	
+	.form-row .callback span { font-size: 2.1rem; }
 }
 @media( min-width: 1040px ) {
 	.form-row.large-5.large-offset-1 { padding-right: 20px; }
@@ -717,6 +722,8 @@ button .icon,
 	.form-row.large-5.large-offset-1 input + .icon {
 		right: 40px;
 	}
+
+	.form-row .callback span { font-size: 2.4rem; }
 }
 
 

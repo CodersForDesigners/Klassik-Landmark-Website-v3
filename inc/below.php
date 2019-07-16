@@ -76,7 +76,7 @@
 			</section>
 
 
-			<section class="diagram-section section-height fill-light-1">
+			<section id="aerodynamics" class="diagram-section section-height fill-light-1">
 				<div class="row">
 					<div class="container fill-light-0">
 						<div class="diagram columns small-12 large-6" style="background-image: url('https://res.cloudinary.com/klassik/image/upload/Website/diagrams/diagram_1.png<?php echo $ver ?>');">
@@ -596,7 +596,6 @@
 	<script type="text/javascript" src="/js/modules/navigation.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/modules/video_embed.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/modules/modal_box.js<?= $ver ?>"></script>
-	<script type="text/javascript" src="/js/modules/smoothscroll.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/modules/forms.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/modules/disclaimer.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/modules/carousel.js<?= $ver ?>"></script>
@@ -618,6 +617,34 @@
 					console.log( e.message )
 				} );
 			} );
+		} );
+
+
+		/*
+		 *
+		 * Smooth-scroll to sections
+		 *
+		 */
+		$( document ).on( "click", "a[ href ^= '#' ]", function ( event ) {
+
+			var $link = $( event.target ).closest( "a" );
+			// Extract the id of the section
+			var toSectionId = $link.attr( "href" ).slice( 1 );
+			// Get a reference to the DOM node representing the section
+			var domSection = document.getElementById( toSectionId );
+			// If the section don't exist, we don't want to prevent the default behavior
+			if ( ! domSection )
+				return;
+			// It does exist, so now we do prevent the default behavior
+			event.preventDefault();
+			event.stopPropagation();
+			event.stopImmediatePropagation();
+			// Scroll to the section
+			window.scrollTo( { top: domSection.offsetTop, behavior: "smooth" } );
+
+			// Just a fallback to ensure that the default behavior is prevented
+			return false;
+
 		} );
 
 	</script>
