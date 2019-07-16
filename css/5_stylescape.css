@@ -5,7 +5,7 @@
 
 /* ## Basic Breakpoints
  * ====================
- 
+
 @media( min-width: 640px )  {}
 @media( min-width: 1040px ) {}
 @media( min-width: 1480px ) {}
@@ -732,7 +732,7 @@ button .icon,
 
 @media( min-width: 1040px ) {
 	.type-description .definition { padding: 20px; }
-	
+
 	.type-description .large-5.large-offset-1 { padding-right: 40px; }
 	.type-description .large-5.large-offset-0 { padding-left: 40px; }
 }
@@ -749,12 +749,6 @@ button .icon,
  *	LivProp Chat Widget
  *
  */
-/* Hide the widget on small screens */
-@media ( max-width: 640px ) {
-	#ls_theLayer { display: none !important; }
-	.livprop_overlay { display: none !important; }
-}
-
 /* For the default skin */
 #ls_theLayer {
 	/*bottom: 10rem !important;*/
