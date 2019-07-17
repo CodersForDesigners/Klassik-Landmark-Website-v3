@@ -47,12 +47,19 @@ $( document ).on( "change", ".js_phone_country_code", function ( event ) {
 var $enquiryFormSite = $( "[ data-loginner = 'Enquiry' ]" );
 Loginner.registerLoginPrompt( "Enquiry", {
 	onTrigger: function ( event ) {
-		$( ".js_enquiry_form" ).addClass( "hidden" );
-		$enquiryFormSite
-			.find( ".loginner_form_phone" )
-				.removeClass( "hidden" )
-				.find( ".js_phone_number" )
-					.get( 0 ).focus();
+		var $enquiryForm = $enquiryFormSite.find( ".js_enquiry_form" );
+		var $phoneForm = $enquiryFormSite.find( ".loginner_form_phone" );
+
+		// Copy over the phone number values from the Enquiry form
+		var phoneCountryCode = $enquiryForm.find( ".js_phone_country_code_label" ).val();
+		var phoneNumber = $enquiryForm.find( ".js_phone_number" ).val().replace( /\D/g, "" );
+		$enquiryForm.find( ".js_phone_number" ).val( phoneNumber );
+		// Paste them values over to the Phone form
+		$phoneForm.find( ".js_phone_country_code" ).val( phoneCountryCode );
+		$phoneForm.find( ".js_phone_number" ).val( phoneNumber );
+
+		// Submit the Phone form under the hood
+		$phoneForm.trigger( "submit" );
 	},
 	onPhoneValidationError: function ( message ) {
 		__OMEGA.utils.notify( message, {
@@ -62,10 +69,12 @@ Loginner.registerLoginPrompt( "Enquiry", {
 		console.log( message )
 	},
 	onPhoneSend: function ( phoneNumber, project ) {
-		$( this ).find( "[ type = submit ] span" ).text( "Sending" );
+		$enquiryFormSite.find( ".js_enquiry_form" )
+			.find( "[ type = submit ] span" ).text( "Sending" );
 	},
 	onShowOTP: function ( domPhoneForm, domOTPForm, phoneNumber, project ) {
-		$( domPhoneForm ).addClass( "hidden" );
+		$enquiryFormSite.find( ".js_enquiry_form" ).addClass( "hidden" )
+			.find( "[ type = submit ] span" ).text( "Send" );
 		$( domOTPForm ).removeClass( "hidden" );
 		__OMEGA.utils.addPotentialCustomer( phoneNumber, project );
 	},

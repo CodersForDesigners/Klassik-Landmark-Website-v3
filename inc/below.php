@@ -160,7 +160,7 @@
 										</select>
 										<!-- Concise phone country code label -->
 										<!-- managed in JavaScript -->
-										<input type="text" class="js_phone_country_code_label" value="(+91)">
+										<input type="text" class="js_phone_country_code_label" value="(+91)" disabled>
 									</div>
 									<div class="phone-number">
 										<input id="enquire-form-phone-field" class="block js_phone_number" type="text">
@@ -384,7 +384,7 @@
 													</select>
 													<!-- Concise phone country code label -->
 													<!-- managed in JavaScript -->
-													<input type="text" class="js_phone_country_code_label" value="(+91)">
+													<input type="text" class="js_phone_country_code_label" value="(+91)" disabled>
 												</div>
 												<div class="phone-number">
 													<input id="enquire-form-phone-field" class="block js_phone_number" type="text">
