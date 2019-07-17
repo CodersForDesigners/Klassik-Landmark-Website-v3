@@ -644,22 +644,22 @@ hr.underline {
 
 
 /* -- the "Phone number" field -- */
-.form-row .phone-field {
+.form-row.phone-field {
 	display: flex;
 	flex-wrap: wrap;
 }
-.form-row .phone-field label {
+.form-row.phone-field label {
 	flex-basis: 100%;
 	margin: 0 0 0.2rem;
 }
-.form-row .phone-field .phone-country-code {
+.form-row.phone-field .phone-country-code {
 	position: relative;
 	flex-basis: 25%;
 }
-	.form-row .phone-field .phone-country-code select {
+	.form-row.phone-field .phone-country-code select {
 		width: 100%;
 	}
-	.form-row .phone-field .phone-country-code input {
+	.form-row.phone-field .phone-country-code input {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -669,7 +669,37 @@ hr.underline {
 		text-align: center;
 		pointer-events: none;
 	}
-.form-row .phone-field .phone-number {
+.form-row.phone-field .phone-number {
+	flex-basis: 75%;
+}
+
+	/* When .phone-field is a child of the .form-row  */
+.form-row .nested-phone-field {
+	display: flex;
+	flex-wrap: wrap;
+}
+.form-row .nested-phone-field label {
+	flex-basis: 100%;
+	margin: 0 0 0.2rem;
+}
+.form-row .nested-phone-field .phone-country-code {
+	position: relative;
+	flex-basis: 25%;
+}
+	.form-row .nested-phone-field .phone-country-code select {
+		width: 100%;
+	}
+	.form-row .nested-phone-field .phone-country-code input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 11px 7px;
+		text-align: center;
+		pointer-events: none;
+	}
+.form-row .nested-phone-field .phone-number {
 	flex-basis: 75%;
 }
 
@@ -691,7 +721,7 @@ button .icon,
 	.form-row input + .icon {
 		bottom: 40px;
 	}
-	
+
 	.form-row .callback span { font-size: 2.1rem; }
 }
 @media( min-width: 1040px ) {

@@ -51,7 +51,7 @@
 							</label>
 						</div>
 						<div class="form-row columns small-10 small-offset-1 medium-6 medium-offset-3 large-5 large-offset-1">
-							<div class="phone-field">
+							<div class="nested-phone-field">
 								<label for="enquire-form-phone-field">
 									<span>Please provide your phone number</span>
 								</label>
