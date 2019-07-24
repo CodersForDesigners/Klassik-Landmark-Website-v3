@@ -18,6 +18,9 @@
 
 	<script type="text/javascript">
 
+		/*
+		 * Send a message to the parent page, telling it your "ready"
+		 */
 		window.onload = function () {
 			setTimeout( function () {
 				window.parent.postMessage( {

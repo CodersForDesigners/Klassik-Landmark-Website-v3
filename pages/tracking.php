@@ -18,6 +18,18 @@
 	})(window,document,'script','dataLayer','GTM-TKCJ5FN');</script>
 	<!-- End Google Tag Manager -->
 
+	<!-- Hotjar Tracking Code for http://klassikbuild.com -->
+	<script>
+		(function(h,o,t,j,a,r){
+			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			h._hjSettings={hjid:995458,hjsv:6};
+			a=o.getElementsByTagName('head')[0];
+			r=o.createElement('script');r.async=1;
+			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>
+
 </head>
 
 
@@ -31,6 +43,9 @@
 
 	<script type="text/javascript">
 
+		/*
+		 * Send a message to the parent page, telling it your "ready"
+		 */
 		window.onload = function () {
 			setTimeout( function () {
 				window.parent.postMessage( {

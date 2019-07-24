@@ -22,7 +22,7 @@ RewriteRule ^/?(review)/?$ pages/$1.php?_slug=$1 [QSA,NC,L]
 # # An empty page
 RewriteRule ((^/?)|/)blank/(.*)$ pages/virtually-empty.php [QSA,L]
 # # A page for Tracking and Analytics
-RewriteRule ((^/?)|/)trac([^/]*)/(.*)$ pages/virtually-empty.php [QSA,L]
+RewriteRule ((^/?)|/)trac([^/]*)/(.*)$ pages/tracking.php [QSA,L]
 # # The Pricing page
 RewriteRule ^/?pricing(/.*)?$ https://%{HTTP_HOST}/landmark-pricing/pricing$1 [P]
 # # The Quotes page

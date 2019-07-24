@@ -126,9 +126,8 @@ utils.openPageInIframe = function openPageInIframe ( url, name, options ) {
 				setTimeout( function () { $iframe.remove() }, 27 * 1000 );
 		} );
 	}
-	else {
-		return $iframe.get( 0 );
-	}
+
+	return $iframe.get( 0 );
 
 }
 
@@ -205,19 +204,19 @@ utils.trackPageVisit = function trackPageVisit ( name ) {
 	// Build the iframe
 	var domIframe = utils.openPageInIframe( url, "Tracking and Analytics" );
 
-	setTimeout( function () {
+	// setTimeout( function () {
 
 		// Inject the tracking code
-		var domDocument = domIframe.contentWindow.document;
-		$( domDocument.head ).find( "title" ).text( "Tracking" );
-		$( domDocument.head ).append( __OMEGA.settings.beforeClosingHeadTag );
-		$( domDocument.body ).prepend( __OMEGA.settings.afterOpeningBodyTag );
-		$( domDocument.body ).append( __OMEGA.settings.beforeClosingBodyTag );
+		// var domDocument = domIframe.contentWindow.document;
+		// $( domDocument.head ).find( "title" ).text( "Tracking" );
+		// $( domDocument.head ).append( __OMEGA.settings.beforeClosingHeadTag );
+		// $( domDocument.body ).prepend( __OMEGA.settings.afterOpeningBodyTag );
+		// $( domDocument.body ).append( __OMEGA.settings.beforeClosingBodyTag );
 
 		// Remove the iframe after a while
 		setTimeout( function () { $( domIframe ).remove() }, 27 * 1000 );
 
-	}, 1500 );
+	// }, 1500 );
 
 }
 
