@@ -41,7 +41,15 @@
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
+	<!-- This is just for the page to have some dimensions -->
+	<div style="height: 2500px; background-color: ghostwhite"></div>
+
 	<script type="text/javascript">
+
+		// Simply log to the console when scrolling
+		window.onscroll = function () {
+			console.log( "scrolling." )
+		}
 
 		/*
 		 * Send a message to the parent page, telling it your "ready"
@@ -51,8 +59,53 @@
 				window.parent.postMessage( {
 					status: "ready"
 				}, location.origin );
+				simulateScrolling();
 			}, 1000 );
 		};
+
+
+		/*
+		 * Wait for a bit and then run a given function
+		 */
+		function waitFor ( seconds ) {
+			seconds = seconds || 1;
+			return new Promise( function ( resolve, reject ) {
+				setTimeout( function () {
+					resolve();
+				}, seconds * 1000 );
+			} );
+		}
+
+		/*
+		 * Simulate a scroll up and down the page
+		 */
+		function simulateScrolling () {
+
+			var pageHeight = document.body.scrollHeight;
+
+			waitFor()
+				.then( function () {
+					window.scrollTo( 0, pageHeight );
+					return waitFor();
+				} )
+				.then( function () {
+					window.scrollTo( 0, 0 );
+					return waitFor();
+				} )
+				.then( function () {
+					window.scrollTo( 0, pageHeight );
+					return waitFor();
+				} )
+				.then( function () {
+					window.scrollTo( 0, 0 );
+					return waitFor();
+				} )
+				.then( function () {
+					window.scrollTo( 0, pageHeight );
+					return waitFor();
+				} )
+
+		}
 
 	</script>
 
