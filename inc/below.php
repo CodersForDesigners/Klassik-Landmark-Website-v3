@@ -652,7 +652,7 @@
 	<!-- Other Modules -->
 	<?php // require __DIR__ . '/inc/can-user-hover.php' ?>
 		<!-- LivProp Chat -->
-	<script src="https://cwc.livserv.in/chat.js?lid=8623"></script>
+	<script id="lp_cwc_xqzyihjdskw" src="https://cwc.livserv.in/chat.js?lid=8623"></script>
 	<script src="https://cw1.livserv.in?did=8623&pid=1"></script>
 
 </body>
