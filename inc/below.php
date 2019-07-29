@@ -171,7 +171,7 @@
 									<label>
 										<span class="invisible">Submit</span><br>
 										<button type="submit" class="button block fill-dark-0" style="position: relative;">
-											<span>Send</span>
+											<span>Submit</span>
 											<img class="icon" src="/media/icons/send.svg<?php echo $ver ?>">
 										</button>
 									</label>
@@ -395,7 +395,7 @@
 												<label>
 													<span class="invisible">Submit</span><br>
 													<button type="submit" class="button block fill-dark-0" style="position: relative;">
-														<span>Send</span>
+														<span>Submit</span>
 														<img class="icon" src="/media/icons/send.svg<?php echo $ver ?>">
 													</button>
 												</label>
