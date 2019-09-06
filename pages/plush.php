@@ -7,6 +7,11 @@
 
 // Page-specific preparatory code goes here.
 
+$isUserLoggedIn = false;
+if ( ! empty( $_COOKIE[ 'omega-user' ] ) )
+	$isUserLoggedIn = true;
+
+
 ?>
 
 <?php require_once __DIR__ . '/../inc/above.php'; ?>
@@ -19,7 +24,7 @@
 
 <!-- Apartment Section -->
 <!-- Apartment Section: Form -->
-<section class="fill-neutral-0">
+<section class="fill-neutral-0 <?php if ( $isUserLoggedIn ) : ?> hidden <?php endif; ?>">
 	<div class="row">
 		<div class="container">
 			<div class="columns small-12 fill-light-2 block-space-top-bottom">
