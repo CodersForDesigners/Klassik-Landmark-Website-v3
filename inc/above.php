@@ -32,7 +32,13 @@ http_response_code( 200 );
 			/*
 			 * Arbitrary Code ( Top of Body )
 			 */
-			echo getContent( '', 'arbitrary_code_body_top' );
+			echo getContent( <<<ARB
+				<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKCJ5FN"
+					height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+				<!-- End Google Tag Manager (noscript) -->
+ARB
+, 'arbitrary_code_body_top' );
 		?>
 
 	<!--  ★  MARKUP GOES HERE  ★  -->
