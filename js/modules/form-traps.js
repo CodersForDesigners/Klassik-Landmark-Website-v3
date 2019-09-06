@@ -101,6 +101,16 @@ Loginner.registerLoginPrompt( "Enquiry", {
 	onOTPVerified: function ( context, phoneNumber, project ) {
 		var url = "track/enquire-now";
 		__OMEGA.utils.trackPageVisit( url );
+
+		// For Facebook
+		var fbUrl = window.location.pathname;
+		if ( window.location.search )
+			fbUrl += window.location.search + "&enquiry=true";
+		else
+			fbUrl += "?enquiry=true";
+		fbUrl += window.location.hash;
+		history.pushState( { }, "", fbUrl );
+
 		__OMEGA.utils.verifyPotentialCustomer( phoneNumber, project );
 	},
 	onLogin: function ( user, context ) {
@@ -187,6 +197,16 @@ Loginner.registerLoginPrompt( "Brochure", {
 		var url = "track/brochure";
 		__OMEGA.utils.trackPageVisit( url );
 		__OMEGA.utils.verifyPotentialCustomer( phoneNumber, project );
+
+		// For Facebook
+		var fbUrl = window.location.pathname;
+		if ( window.location.search )
+			fbUrl += window.location.search + "&enquiry=true";
+		else
+			fbUrl += "?enquiry=true";
+		fbUrl += window.location.hash;
+		history.pushState( { }, "", fbUrl );
+
 	},
 	onLogin: function ( user, context ) {
 
@@ -262,6 +282,16 @@ Loginner.registerLoginPrompt( "Air Certificate", {
 		var url = "track/aq-certificate";
 		__OMEGA.utils.trackPageVisit( url );
 		__OMEGA.utils.verifyPotentialCustomer( phoneNumber, project );
+
+		// For Facebook
+		var fbUrl = window.location.pathname;
+		if ( window.location.search )
+			fbUrl += window.location.search + "&enquiry=true";
+		else
+			fbUrl += "?enquiry=true";
+		fbUrl += window.location.hash;
+		history.pushState( { }, "", fbUrl );
+
 	},
 	onLogin: function ( user, context ) {
 
