@@ -138,7 +138,6 @@ if ( ! empty( $_COOKIE[ 'omega-user' ] ) )
 					<div class="points-roman">
 						<div class="point h4 text-light-1 columns small-8 small-offset-2 medium-6 medium-offset-3 large-8 large-offset-2">Aerodynamic Tower Boosts Ventilation</div>
 						<div class="point h4 text-light-1 columns small-8 small-offset-2 medium-6 medium-offset-3 large-8 large-offset-2">Bright, Airy Kitchen & Utility</div>
-						<div class="point h4 text-light-1 columns small-8 small-offset-2 medium-6 medium-offset-3 large-7 large-offset-3">9'6" Clear Ceiling-Height</div>
 						<div class="point h4 strong text-light-1 columns small-8 small-offset-2 medium-6 medium-offset-3 large-7 large-offset-3">20% More Room Volume</div>
 						<div class="point h4 text-light-1 columns small-8 small-offset-2 medium-6 medium-offset-3 large-6 large-offset-4">Only 3 Flats Per Floor</div>
 						<div class="point h4 text-light-1 columns small-8 small-offset-2 medium-6 medium-offset-3 large-6 large-offset-4">Tall 8 Feet Entry Door</div>

@@ -138,7 +138,6 @@ if ( ! empty( $_COOKIE[ 'omega-user' ] ) )
 					<div class="points-roman">
 						<div class="point h4 text-dark-1 columns small-8 small-offset-2 medium-6 medium-offset-3 large-8 large-offset-2">Aerodynamic Tower Boosts Ventilation</div>
 						<div class="point h4 text-dark-1 columns small-8 small-offset-2 medium-6 medium-offset-3 large-8 large-offset-2">Bright, Airy Kitchen & Utility</div>
-						<div class="point h4 strong text-dark-1 columns small-8 small-offset-2 medium-6 medium-offset-3 large-7 large-offset-3">9'6" Clear Ceiling-Height</div>
 						<div class="point h4 text-dark-1 columns small-8 small-offset-2 medium-6 medium-offset-3 large-7 large-offset-3">50% more air and natural light in bedrooms</div>
 						<div class="point h4 text-dark-1 columns small-8 small-offset-2 medium-6 medium-offset-3 large-6 large-offset-4">Thermal Resistant & Noise Resistant POROTHERM Blocks</div>
 						<div class="point h4 strong text-dark-1 columns small-8 small-offset-2 medium-6 medium-offset-3 large-6 large-offset-4">Only 3 Flats Per Floor</div>
@@ -165,7 +164,6 @@ if ( ! empty( $_COOKIE[ 'omega-user' ] ) )
 					<div class="points-roman">
 						<div class="point h4 text-dark-1 columns small-8 small-offset-2 medium-6 medium-offset-3 large-8 large-offset-2">Aerodynamic Tower Boosts Ventilation</div>
 						<div class="point h4 text-dark-1 columns small-8 small-offset-2 medium-6 medium-offset-3 large-8 large-offset-2">Bright, Airy Kitchen & Utility</div>
-						<div class="point h4 text-dark-1 columns small-8 small-offset-2 medium-6 medium-offset-3 large-7 large-offset-2">9'6" Clear Ceiling-Height</div>
 						<div class="point h4 text-dark-1 columns small-8 small-offset-2 medium-6 medium-offset-3 large-7 large-offset-2">Dedicated Pooja space</div>
 						<div class="point h4 text-dark-1 columns small-8 small-offset-2 medium-6 medium-offset-3 large-6 large-offset-2">Only 3 Flats Per Floor</div>
 						<div class="point h4 strong text-dark-1 columns small-8 small-offset-2 medium-6 medium-offset-3 large-6 large-offset-2">50% more air and natural light in bedrooms</div>

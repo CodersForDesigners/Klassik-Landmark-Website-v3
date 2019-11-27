@@ -134,4 +134,7 @@
 		left: -15px;
 		font-size: 1.3rem;
 	}
+	.apartment-section-floorplan .floorplan.island-f {
+		transform: scale(1.8) rotate(-25deg) translateY(3%) translateX(3%);
+	}
 }
